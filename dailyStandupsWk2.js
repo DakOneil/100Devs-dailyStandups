@@ -33,4 +33,29 @@ function sumSingleNums(arr) {
   // optimized
   
   const sumSingles = arr => arr.filter((el)=> arr.indexOf(el)==arr.lastIndexOf(el)).reduce((acc,c)=>acc+c)
-  
+
+
+
+
+
+
+// July 13, 2021
+// Your task is to remove all consecutive duplicate words from a string, leaving only first words entries. For example:
+
+// "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
+
+// --> "alpha beta gamma delta alpha beta gamma delta"
+
+let str1 = "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
+
+// Brute
+function remDup(str) {
+  return str.split(' ').filter((el,i,arr)=> {
+    return el != arr[i+1]
+  }).join(' ')
+}
+// Optimized
+const removeDuplicates = str => str.split(' ').filter((el,i,arr)=>el!=arr[i+1]).join(' ')
+//test case
+console.log(remDup(str1))
+console.log(removeDuplicates(str1))
