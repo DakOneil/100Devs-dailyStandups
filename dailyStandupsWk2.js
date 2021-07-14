@@ -59,3 +59,20 @@ const removeDuplicates = str => str.split(' ').filter((el,i,arr)=>el!=arr[i+1]).
 //test case
 console.log(remDup(str1))
 console.log(removeDuplicates(str1))
+
+
+
+//July 14, 2021
+
+// Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+
+// domainName("http://github.com/carbonfive/raygun") == "github" 
+// domainName("http://www.zombie-bites.com") == "zombie-bites"
+// domainName("https://www.cnet.com") == "cnet
+
+function domainName(str) {
+  str = str.replace("https://", '');
+  str = str.replace("http://", '');
+  str = str.replace("www.", '');
+  return str.split('.')[0];
+}
