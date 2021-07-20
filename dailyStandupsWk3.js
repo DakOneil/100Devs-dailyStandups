@@ -54,3 +54,8 @@ function duplicateEncode(word){
   }
   return codeWord
 }
+function duplicateEncodeOpt(word) {
+  return word.toLowerCase().split('').map((el, i, arr)=> {
+    return arr.indexOf(el) === arr.lastIndexOf(el) ? '(' : ')'
+  }).join('')
+}
