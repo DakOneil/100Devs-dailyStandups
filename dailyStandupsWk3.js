@@ -126,7 +126,5 @@ return maxMin
 
 function switcher(x){
   let aB = 'zyxwvutsrqponmlkjihgfedcba!? '
-  return x.map((el,i,arr)=> {
-    return aB[+el - 1]
-  }).join('')
+  return x.map(el=> aB[+el - 1]).join('')
 }
