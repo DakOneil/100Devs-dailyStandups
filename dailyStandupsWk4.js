@@ -35,3 +35,16 @@ function sortArray(array) {
 function twoOldestAges(ages){
   return [ages.sort((a,b)=>b-a)[1], ages.sort((a,b)=>b-a)[0]]
 }
+
+
+
+
+// Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
+
+// Example
+// Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
+
+var capitals = function (word) {
+	// Write your code here
+  return word.match(/[A-Z]/g).map(el=>word.indexOf(el))
+};
