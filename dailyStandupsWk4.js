@@ -50,3 +50,4 @@ var capitals = function (word) {
 };
 //test
 //quick test
+//check green square
