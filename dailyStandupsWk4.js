@@ -48,3 +48,4 @@ var capitals = function (word) {
 	// Write your code here
   return word.match(/[A-Z]/g).map(el=>word.indexOf(el))
 };
+//test
