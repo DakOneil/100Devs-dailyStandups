@@ -44,10 +44,17 @@ function twoOldestAges(ages){
 // Example
 // Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
 
+//DOESN'T WORK FOR REPEATED LETTERS, GIVES INDEX OF FIRST OCCURRENCE
 var capitals = function (word) {
 	// Write your code here
   return word.match(/[A-Z]/g).map(el=>word.indexOf(el))
 };
-//test
-//quick test
-//check green square
+
+var capitals = function (word) {
+  // Write your code here
+  let array = []
+  for (let i = 0 ; i < word.length ; i++) {
+    if (word.charCodeAt(i) < 97) array.push(i)
+  }
+  return array
+};
