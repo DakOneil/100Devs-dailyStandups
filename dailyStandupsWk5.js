@@ -44,3 +44,12 @@ function dbSort(a){
     let strs = a.filter(x=>typeof x === 'string')
     return nums.sort((b,c)=>b-c).concat(strs.sort())
   }
+
+  // another solution with minor change
+
+  function dbSort(a){
+    // Code here
+      let nums = a.filter(x=>typeof x === 'number').sort((b,c)=>b-c)
+      let strs = a.filter(x=>typeof x === 'string')
+      return nums.concat(strs.sort())
+    }
