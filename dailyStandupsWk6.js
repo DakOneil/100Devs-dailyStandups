@@ -34,3 +34,34 @@ function manualReverseChar(str) {
     }
     return newStr
 }
+
+
+
+
+
+
+//August 11, 2021
+
+// Given a string of characters, return the character that appears the most often.
+
+// describe("Max Character", () => {
+//  it("Should return max character", () => {
+//   assert.equal(max("Hello World!"), "l");
+//  });
+// });
+
+// No String or Array Methods (well brute force it first, but then no methods)! 
+
+
+//brute
+function mostCommonChar(str) {
+    let cache = {}
+    for (let i = 0 ; i < str.length ; i++) {
+        if (!cache[str[i]]) cache[str[i]] = 1
+        else cache[str[i]]++
+    }
+    const arr = Object.values(cache)
+    arr.sort((a,b)=>b-a)
+    const max = arr[0]
+    return Object.keys(cache).find(key => cache[key] === max);
+}
