@@ -65,3 +65,24 @@ function mostCommonChar(str) {
     const max = arr[0]
     return Object.keys(cache).find(key => cache[key] === max);
 }
+
+
+
+
+
+//August 12, 2021
+
+// Given a string of words or phrases, count the number of vowels.
+
+// No Regex! Unless that is your brute force...
+
+function vowelCount(str) {
+    let vowelKey = 'aeiou'
+    let count = 0
+    for (let i = 0 ; i < str.length ; i++) {
+        if (vowelKey.includes(str[i].toLowerCase())) {
+            count++
+        }
+    }
+    return count
+}
