@@ -86,3 +86,22 @@ function vowelCount(str) {
     }
     return count
 }
+
+
+
+
+
+
+//August 13, 2021
+
+//Given an array of items, reverse the order.
+
+// No reverse method! Unless that is your brute force first...
+
+function revArrayOrder(arr) {
+    let reversed = []
+    for (let i = arr.length -1 ; i >= 0 ; i--) {
+        reversed.push(arr[i])
+    }
+    return reversed
+}
