@@ -69,3 +69,76 @@ function canCutOut(note, mag) {
       else return true
     }).every(x=>x)
 }
+
+
+
+
+
+//August 18, 2021
+
+// Given an array of numbers, return all pairs that add up to a given sum. The numbers can be used more than once.
+
+// describe("Two Sum", () => {
+//  it("Should implement two sum", () => {
+//   assert.deepEqual(twoSum([1, 2, 2, 3, 4], 4), [[2, 2], [3, 1]]);
+//  });
+// });
+
+function twoSum(array, sum) {
+    const pairs = []
+    const store = {}
+    for (let part1 of array) {
+      const part2 = sum - part1;
+      if (store.indexOf(part2) !== -1){
+         pairs.push([part1, part2]);
+      }
+      if(!store[part2]){
+        store[part1] = 1
+      }else{
+        pairs.push([part1,part2])
+      }
+    }
+  
+    return pairs
+  }
+  
+
+
+
+
+
+
+//August 19, 2021
+
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+// Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+// Input: prices = [7,1,5,3,6,4]
+// Output: 5
+
+// Input: prices = [7,6,4,3,1]
+// Output: 0
+
+
+
+
+
+
+
+//August 20, 2021
+
+// Given an array nums of size n, return the majority element.
+
+// The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+// Example 1:
+
+// Input: nums = [3,2,3]
+// Output: 3
+// Example 2:
+
+// Input: nums = [2,2,1,1,1,2,2]
+// Output: 2
