@@ -106,8 +106,6 @@ function twoSum(array, sum) {
 
 
 
-
-
 //August 19, 2021
 
 // You are given an array prices where prices[i] is the price of a given stock on the ith day.
@@ -122,7 +120,20 @@ function twoSum(array, sum) {
 // Input: prices = [7,6,4,3,1]
 // Output: 0
 
-
+function maxProfit(arr) {
+    let low = arr[0]
+    let high 
+    for (let i of arr) {
+      if (arr[i] < low) low = arr[i]
+    }
+    for (let i = arr.indexOf(low) ; i < arr.length ; i++) {
+      if (!high) high = arr[i]
+      else if (arr[i] > high) high = arr[i]
+    }
+    let max = high - low
+    console.log(low, high, max)
+    return max 
+  }
 
 
 
