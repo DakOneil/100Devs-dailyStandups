@@ -153,3 +153,13 @@ function maxProfit(arr) {
 
 // Input: nums = [2,2,1,1,1,2,2]
 // Output: 2
+
+function majorEl(arr) {
+    let cache = {}
+    for (let i of arr) {
+      if (!cache[i]) cache[i] = 1
+      else cache[i]++
+    }
+    
+    return Object.keys(cache).find(key => cache[key] === Object.values(cache).sort((a,b)=>b-a)[0])
+  }
