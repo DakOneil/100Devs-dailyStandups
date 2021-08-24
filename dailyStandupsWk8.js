@@ -35,7 +35,6 @@
   // }
 
   //optimized (i think ?) -- bigO = linear
-  
 function factorialAddition(n) {
     let sum = 0
     for (let i = 1 ; i <= n ; i++) {
@@ -55,3 +54,8 @@ function goodPairs(arr) {
   }
   return total
 }
+
+//Leon's solution
+// function goodPairs(nums) {
+
+// }
