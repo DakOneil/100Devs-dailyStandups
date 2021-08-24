@@ -87,3 +87,15 @@ function anyDuplicates(nums) {
   }
   return false
 }
+
+function anyDuplicates(nums) {
+  let map = {}
+  for (let i = 0 ; i < nums.length ; i++){
+    map[nums[i]] = map[nums[i]] + 1 || 1
+
+    if (map[nums[i]] > 1) {
+      return true
+    }
+  }
+  return false
+}
