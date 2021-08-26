@@ -127,7 +127,7 @@ function anyDuplicates(nums) {
 // jewels and stones consist of only English letters.
 // All the characters of jewels are unique.
 
-function(jewels, stones) {
+function whichAreJewels(jewels, stones) {
   let count = 0
   for (let i = 0 ; i < stones.length ; i++) {
     if (jewels.includes(stones[i])) {
